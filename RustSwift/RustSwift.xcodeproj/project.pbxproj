@@ -14,6 +14,8 @@
 		807DF2F82BABE88B009FC3B3 /* RustSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807DF2F72BABE88B009FC3B3 /* RustSwiftTests.swift */; };
 		807DF3022BABE88B009FC3B3 /* RustSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807DF3012BABE88B009FC3B3 /* RustSwiftUITests.swift */; };
 		807DF3042BABE88B009FC3B3 /* RustSwiftUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807DF3032BABE88B009FC3B3 /* RustSwiftUITestsLaunchTests.swift */; };
+		807DF3112BABE9BB009FC3B3 /* Hello.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807DF3102BABE9BB009FC3B3 /* Hello.swift */; };
+		807DF3142BABEA53009FC3B3 /* librust.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 807DF3132BABEA51009FC3B3 /* librust.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		807DF2FD2BABE88B009FC3B3 /* RustSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RustSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		807DF3012BABE88B009FC3B3 /* RustSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RustSwiftUITests.swift; sourceTree = "<group>"; };
 		807DF3032BABE88B009FC3B3 /* RustSwiftUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RustSwiftUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		807DF3102BABE9BB009FC3B3 /* Hello.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hello.swift; sourceTree = "<group>"; };
+		807DF3132BABEA51009FC3B3 /* librust.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = librust.a; path = "../rust-ios-example/hello-rust/libs/librust.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				807DF3142BABEA53009FC3B3 /* librust.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 				807DF2F62BABE88B009FC3B3 /* RustSwiftTests */,
 				807DF3002BABE88B009FC3B3 /* RustSwiftUITests */,
 				807DF2E42BABE88A009FC3B3 /* Products */,
+				807DF3122BABEA50009FC3B3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +102,7 @@
 			children = (
 				807DF2E62BABE88A009FC3B3 /* RustSwiftApp.swift */,
 				807DF2E82BABE88A009FC3B3 /* ContentView.swift */,
+				807DF3102BABE9BB009FC3B3 /* Hello.swift */,
 				807DF2EA2BABE88B009FC3B3 /* Assets.xcassets */,
 				807DF2EC2BABE88B009FC3B3 /* Preview Content */,
 			);
@@ -125,6 +132,14 @@
 				807DF3032BABE88B009FC3B3 /* RustSwiftUITestsLaunchTests.swift */,
 			);
 			path = RustSwiftUITests;
+			sourceTree = "<group>";
+		};
+		807DF3122BABEA50009FC3B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				807DF3132BABEA51009FC3B3 /* librust.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				807DF2E92BABE88A009FC3B3 /* ContentView.swift in Sources */,
+				807DF3112BABE9BB009FC3B3 /* Hello.swift in Sources */,
 				807DF2E72BABE88A009FC3B3 /* RustSwiftApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,10 +450,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "/Users/zhangjingzheng/Desktop/mine/rust-swift/rust-ios-example/hello-rust/libs";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = demo.swiftrust.RustSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/zhangjingzheng/Desktop/mine/rust-swift/rust-ios-example/hello-rust/include/rust.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -463,10 +481,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "/Users/zhangjingzheng/Desktop/mine/rust-swift/rust-ios-example/hello-rust/libs";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = demo.swiftrust.RustSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/zhangjingzheng/Desktop/mine/rust-swift/rust-ios-example/hello-rust/include/rust.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
